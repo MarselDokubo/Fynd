@@ -16,7 +16,7 @@ export default function PublicJobPage({
   job
 }: Type_PublicJobPageProps) {
   const isInvalid =
-    !job || !organisation || organisation.id !== job.organisation.id;
+    !job || !organisation || organisation.id !== job.organisationId;
   if (isInvalid) return <NotFound />;
 
   return (
@@ -41,3 +41,21 @@ export default function PublicJobPage({
 PublicJobPage.getLayout = function getlayout(page: ReactElement) {
   return <PageLayout>{page}</PageLayout>;
 };
+
+export async function getServerSideProps({
+  params
+}: GetServerSidePropsContext) {
+  const organisationId = params?.organisationId as string;
+  const jobId = params?.jobId as string;
+
+  const [organisation, job] = await Promise.all([
+    getOrganisation(organisationId).catch(() => null),
+    getJob(jobId).catch(() => null)
+  ]);
+  return {
+    props: {
+      organisation,
+      job
+    }
+  };
+}
