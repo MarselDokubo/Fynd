@@ -1,0 +1,41 @@
+[33mcommit 99a0e9302126ec01f1439f06a565daa178d011c3[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: MarselDokubo <connectmarsel@gmail.com>
+Date:   Fri Jul 7 19:09:54 2023 +0100
+
+    removed single from prettierrc
+
+[33mcommit 1a6d449bb105ad3bb9f90c0b6df7f9f95ed4cf45[m
+Author: MarselDokubo <connectmarsel@gmail.com>
+Date:   Fri Jul 7 19:08:14 2023 +0100
+
+    Worked on the Base UI components
+
+[33mcommit 7f724bb1cc802283fbe3cf0b34d92039c3f1c5b7[m
+Author: MarselDokubo <connectmarsel@gmail.com>
+Date:   Fri Jun 30 16:23:46 2023 +0100
+
+    3rd test lint-staged
+
+[33mcommit 8171fa2a30cb38411f0fd725764819c93888c2ac[m
+Author: MarselDokubo <connectmarsel@gmail.com>
+Date:   Fri Jun 30 16:20:11 2023 +0100
+
+    2nd test lint-staged
+
+[33mcommit 78605de565e68644d944916ac58e5deab368ed55[m
+Author: MarselDokubo <connectmarsel@gmail.com>
+Date:   Fri Jun 30 15:53:00 2023 +0100
+
+    testing git push
+
+[33mcommit b1185be0df56a2773a08e535a1ab4ad358c5793a[m
+Author: MarselDokubo <connectmarsel@gmail.com>
+Date:   Fri Jun 30 13:52:46 2023 +0100
+
+    testing lint-staged
+
+[33mcommit ce7caef3a5b848e0ec47e22ad5aeca345300173e[m
+Author: MarselDokubo <connectmarsel@gmail.com>
+Date:   Fri Jun 30 13:45:44 2023 +0100
+
+    Initial commit of app Fynd

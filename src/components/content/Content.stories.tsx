@@ -1,8 +1,8 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { Content } from './Content';
+import { Meta, StoryObj } from "@storybook/react";
+import { Content } from "../content";
 
 const meta: Meta<typeof Content> = {
-  title: 'Component/Content',
+  title: "Component/Content",
   component: Content
 };
 

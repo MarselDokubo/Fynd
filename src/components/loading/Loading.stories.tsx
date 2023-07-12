@@ -1,8 +1,8 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { Loading } from './Loading';
+import { Meta, StoryObj } from "@storybook/react";
+import { Loading } from "../loading";
 
 const meta: Meta<typeof Loading> = {
-  title: 'Component/Loading',
+  title: "Component/Loading",
   component: Loading
 };
 

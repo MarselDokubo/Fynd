@@ -1,4 +1,4 @@
-export type Entity = {
-  id: string;
-  createdAt: number;
+export type Type_Entity = {
+  id?: string;
+  createdAt?: number;
 };

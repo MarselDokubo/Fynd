@@ -1,8 +1,8 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { InfoCard } from './InfoCard';
+import { Meta, StoryObj } from "@storybook/react";
+import { InfoCard } from "../info-card";
 
 const meta: Meta = {
-  title: 'Component/InfoCard',
+  title: "Component/InfoCard",
   component: InfoCard
 };
 
@@ -10,8 +10,8 @@ export default meta;
 
 export const Info: StoryObj = {
   args: {
-    label: 'Some Label',
+    label: "Some Label",
     value:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo fugit, est dolore expedita, cupiditate ducimus eaque numquam nisi ipsam eius harum iure. Eaque delectus fugit voluptas consequatur impedit, distinctio libero, maiores alias saepe, porro magnam minima ipsum iste enim. Expedita enim voluptatibus alias officiis atque, veniam quae error provident! Inventore?'
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo fugit, est dolore expedita, cupiditate ducimus eaque numquam nisi ipsam eius harum iure. Eaque delectus fugit voluptas consequatur impedit, distinctio libero, maiores alias saepe, porro magnam minima ipsum iste enim. Expedita enim voluptatibus alias officiis atque, veniam quae error provident! Inventore?"
   }
 };
