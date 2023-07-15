@@ -49,7 +49,7 @@ const Navbar = () => {
           </HStack>
           <HStack>
             <Button
-              variant="outline"
+              variant="solid"
               onClick={() => console.log("Logging Out...")}
             >
               Log Out

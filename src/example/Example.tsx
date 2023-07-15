@@ -1,33 +1,21 @@
-import { Loading } from "@/components/loading";
-import { Entity } from "@/types";
-import {
-  TableContainer,
-  Table,
-  TableCaption,
-  Thead,
-  Th,
-  Tr,
-  Tbody,
-  Td,
-  Center,
-  Heading,
-  Box,
-  Text
-} from "@chakra-ui/react";
-import { FC } from "react";
+import { useEffect, useState } from "react";
 
-type E = {
-  name: string;
-};
+const loadData = () => Promise.resolve("data");
 
-type render = ({ e }: { e: E }) => string;
+function DataComponent() {
+  const [data, setData] = useState<string>();
+  const [error, setError] = useState();
+  const [isLoading, setIsLoading] = useState<boolean>();
 
-const print: render = ({ e }) => {
-  return e.name;
-};
-
-const e: E = {
-  name: "some string"
-};
-
-print({ e });
+  useEffect(() => {
+    setIsLoading(true);
+    loadData()
+      .then(data => {
+        setData(data);
+      })
+      .catch(e => setError(e));
+  }, []);
+  if (isLoading) return <div>Loading</div>;
+  if (isLoading) return <div>{error}</div>;
+  return <div>{data}</div>;
+}

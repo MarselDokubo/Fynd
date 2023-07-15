@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IS_SERVER = exports.IS_BROWSER = exports.IS_PRODUCTION = exports.IS_TEST = exports.IS_DEVELOPMENT = exports.API_MOCKING = exports.API_URL = void 0;
+exports.API_URL = process.env.NEXT_PUBLIC_API_URL;
+exports.API_MOCKING = process.env.NEXT_PUBLIC_API_MOCKING === "true";
+exports.IS_DEVELOPMENT = process.env.NODE_ENV === "development";
+exports.IS_TEST = process.env.NODE_ENV === "test";
+exports.IS_PRODUCTION = process.env.NODE_ENV === "production";
+exports.IS_BROWSER = typeof window !== "undefined";
+exports.IS_SERVER = typeof window === "undefined";

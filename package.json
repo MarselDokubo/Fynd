@@ -15,12 +15,16 @@
     "@chakra-ui/react": "^2.7.1",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@tanstack/react-query": "^4.29.23",
+    "@tanstack/react-query-devtools": "^4.29.23",
     "@types/node": "20.3.2",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
+    "axios": "^1.4.0",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
     "framer-motion": "^10.12.17",
+    "msw-devtools": "^1.0.2",
     "next": "13.4.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -29,6 +33,7 @@
   },
   "devDependencies": {
     "@chakra-ui/storybook-addon": "^5.0.0",
+    "@mswjs/data": "^0.13.0",
     "@storybook/addon-essentials": "^7.0.24",
     "@storybook/addon-interactions": "^7.0.24",
     "@storybook/addon-links": "^7.0.24",
@@ -41,6 +46,11 @@
     "eslint-plugin-storybook": "^0.6.12",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
+    "msw": "^1.2.2",
+    "react-error-boundary": "^4.0.10",
     "storybook": "^7.0.24"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
