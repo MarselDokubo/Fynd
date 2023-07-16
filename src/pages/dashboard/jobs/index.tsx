@@ -7,11 +7,14 @@ import { Loading } from "@/components/loading";
 import { Seo } from "@/components/seo";
 import { JobList } from "@/features/jobs";
 import { DashboardLayout } from "@/layouts/DashboardLayout";
-import { useJobs, useUser } from "@/testing/TestData";
+import { useJobs } from "@/features/jobs";
+import { useUser } from "@/testing/TestData";
 
 function DashboardJobsPage() {
   const user = useUser();
-  const jobs = useJobs(user.data?.organisationId ?? "");
+  const jobs = useJobs({
+    params: { organisationId: user.data?.organisationId ?? "" }
+  });
   if (jobs.isLoading) return <Loading />;
 
   if (!user.data) return null;

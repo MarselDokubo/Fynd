@@ -6,7 +6,7 @@ type Type_GetOrganisationOptions = {
   organisationId: string;
 };
 
-export function getOrgnisation({
+export function getOrganisation({
   organisationId
 }: Type_GetOrganisationOptions): Promise<Type_Organisation> {
   return apiClient.get(`organisations/${organisationId}`);
@@ -17,7 +17,7 @@ export function useOrganisation({
 }: Type_GetOrganisationOptions) {
   const { data, isLoading } = useQuery({
     queryKey: ["organisations", organisationId],
-    queryFn: () => getOrgnisation({ organisationId })
+    queryFn: () => getOrganisation({ organisationId })
   });
   return { data, isLoading };
 }

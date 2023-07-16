@@ -4,10 +4,10 @@ import { GetServerSidePropsContext, InferGetServerSidePropsType } from "next";
 import { ReactElement } from "react";
 import { Seo } from "@/components/seo";
 import { NotFound } from "@/components/not-found";
-import { JobList, Type_Job } from "@/features/jobs";
-import { OrganisationInfo } from "@/features/organisation";
+import { JobList, getJobs, Type_Job } from "@/features/jobs";
+import { getOrganisation, OrganisationInfo } from "@/features/organisation";
 import { PageLayout } from "@/layouts/PageLayout";
-import { getJobs, getOrganisation } from "@/testing/TestData";
+// import { getJobs, getOrganisation } from "@/testing/TestData";
 import { type } from "os";
 
 type Type_PublicOrganisationPageProps = InferGetServerSidePropsType<
@@ -37,7 +37,7 @@ const PublicOrganisationPage = ({
         </Heading>
         <JobList
           jobs={jobs}
-          organisationId={organisation.id}
+          organisationId={organisation.id ?? ""}
           jobType="public"
         />
       </Stack>
@@ -55,8 +55,8 @@ export async function getServerSideProps({
 }: GetServerSidePropsContext) {
   const organisationId = params?.organisationId as string;
   const [organisation, jobs] = await Promise.all([
-    getOrganisation(organisationId).catch(() => null),
-    getJobs(organisationId).catch(() => [] as Type_Job[])
+    getOrganisation({ organisationId }).catch(() => null),
+    getJobs({ params: { organisationId } }).catch(() => [] as Type_Job[])
   ]);
   return {
     props: {
